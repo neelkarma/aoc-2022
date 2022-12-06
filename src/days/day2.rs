@@ -47,12 +47,9 @@ enum Move {
 impl Move {
     fn from_str(c: &str) -> Self {
         match c {
-            "A" => Self::Rock,
-            "B" => Self::Paper,
-            "C" => Self::Scissors,
-            "X" => Self::Rock,
-            "Y" => Self::Paper,
-            "Z" => Self::Scissors,
+            "A" | "X" => Self::Rock,
+            "B" | "Y" => Self::Paper,
+            "C" | "Z" => Self::Scissors,
             _ => panic!("Invalid move {}", c),
         }
     }
