@@ -6,6 +6,7 @@ mod day5;
 mod day6;
 mod day7;
 mod day8;
+mod day9;
 
 pub trait Day {
     fn part_one(&self, input: &str);
@@ -22,6 +23,7 @@ pub fn get_solution(day: u8) -> Box<dyn Day> {
         6 => Box::new(day6::DaySix),
         7 => Box::new(day7::DaySeven),
         8 => Box::new(day8::DayEight),
+        9 => Box::new(day9::DayNine),
         _ => panic!("Invalid day provided"),
     }
 }
