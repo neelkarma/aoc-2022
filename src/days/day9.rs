@@ -1,9 +1,4 @@
-use std::{
-    cmp::min,
-    collections::{HashMap, HashSet},
-    io::{stdin, Read},
-    iter::repeat,
-};
+use std::{collections::HashSet, iter::repeat};
 
 use super::Day;
 

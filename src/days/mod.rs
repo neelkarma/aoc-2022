@@ -1,4 +1,5 @@
 mod day1;
+mod day10;
 mod day2;
 mod day3;
 mod day4;
@@ -24,6 +25,7 @@ pub fn get_solution(day: u8) -> Box<dyn Day> {
         7 => Box::new(day7::DaySeven),
         8 => Box::new(day8::DayEight),
         9 => Box::new(day9::DayNine),
+        10 => Box::new(day10::DayTen),
         _ => panic!("Invalid day provided"),
     }
 }
