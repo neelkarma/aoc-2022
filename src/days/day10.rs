@@ -62,7 +62,7 @@ impl Day for DayTen {
                     x += add.parse::<i32>().unwrap();
                     result += Self::inc_cycle_p1(&mut cycle, x);
                 }
-                _ => panic!("Invalid cmd {:?}", cmd),
+                _ => unreachable!(),
             }
         }
 
@@ -87,7 +87,7 @@ impl Day for DayTen {
                     x += add.parse::<i32>().unwrap();
                     Self::inc_cycle_p2(&mut crt, &mut cycle, x);
                 }
-                _ => panic!("Invalid cmd {:?}", cmd),
+                _ => unreachable!(),
             }
         }
 

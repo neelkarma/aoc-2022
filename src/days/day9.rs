@@ -64,7 +64,7 @@ impl From<&str> for Direction {
             "D" => Self::Down,
             "L" => Self::Left,
             "R" => Self::Right,
-            _ => panic!("Invalid direction {}", chr),
+            _ => unreachable!(),
         }
     }
 }

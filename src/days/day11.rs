@@ -55,7 +55,7 @@ impl From<&str> for Monkey {
             ["+", num] => Operation::Add(num.parse().unwrap()),
             ["*", "old"] => Operation::Square,
             ["*", num] => Operation::Multiply(num.parse().unwrap()),
-            _ => panic!("Invalid operation string"),
+            _ => unreachable!(),
         };
 
         let divisor: usize = lines[2][3].parse().unwrap();
@@ -133,15 +133,15 @@ impl DayEleven {
             }
         }
 
-        let mut inspected_nums = monkeys
+        let mut inspected = monkeys
             .iter()
             .map(|monkey| monkey.inspected)
             .collect::<Vec<_>>();
 
-        inspected_nums.sort();
-        inspected_nums.reverse();
+        inspected.sort();
+        inspected.reverse();
 
-        inspected_nums[0] * inspected_nums[1]
+        inspected[0] * inspected[1]
     }
 }
 

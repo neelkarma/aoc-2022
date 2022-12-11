@@ -12,7 +12,7 @@ impl Outcome {
             "X" => Self::Loss,
             "Y" => Self::Tie,
             "Z" => Self::Win,
-            _ => panic!("Invalid outcome {}", c),
+            _ => unreachable!(),
         }
     }
     fn to_points(&self) -> usize {
@@ -50,7 +50,7 @@ impl Move {
             "A" | "X" => Self::Rock,
             "B" | "Y" => Self::Paper,
             "C" | "Z" => Self::Scissors,
-            _ => panic!("Invalid move {}", c),
+            _ => unreachable!(),
         }
     }
 

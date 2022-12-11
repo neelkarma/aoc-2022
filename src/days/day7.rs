@@ -30,7 +30,7 @@ impl DaySeven {
                     // add file size to current dir in stack
                     *stack.last_mut().unwrap() += size.parse::<usize>().unwrap();
                 }
-                _ => panic!("Invalid line {}", line),
+                _ => unreachable!(),
             };
         });
 
